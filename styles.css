@@ -259,7 +259,13 @@ body {
     background: var(--gradient-hero);
     z-index: -2;
 }
-
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+   
+}
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -306,9 +312,13 @@ body {
 
 .hero-description {
     font-size: var(--font-size-lg);
+    
     color: var(--text-secondary);
+    
     margin-bottom: var(--spacing-2xl);
     line-height: 1.8;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .hero-buttons {
