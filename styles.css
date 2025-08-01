@@ -21,12 +21,12 @@ body {
 /* ===== CSS CUSTOM PROPERTIES (DESIGN SYSTEM) ===== */
 :root {
     /* Colors */
-    --primary: #3b82f6;
+    --primary: #f3f3f3;
     --primary-dark: #2563eb;
     --primary-light: #0470fe;
     --secondary: #026cff;
-    --accent: #ededed;
-    --accent-light: #d1fae5;
+    --accent: #fff;
+    --accent-light: #a0d911;
     
     /* Text Colors */
     --text-primary: #1e293b;
@@ -48,7 +48,7 @@ body {
     --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, var(--primary), var(--accent));
+    --gradient-primary: linear-gradient(135deg, var(--secondary), var(--accent-light));
     --gradient-hero: linear-gradient(135deg, #c1c3cf 0%, #eaeeeb 100%);
     --gradient-card: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
     
@@ -142,7 +142,7 @@ body {
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
+    background: var(--secondary);
     color: var(--text-white);
     box-shadow: var(--shadow-md);
 }
@@ -154,23 +154,24 @@ body {
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
 }
 
 .btn-secondary:hover {
-    background: var(--primary);
+    background: var(--secondary);
     color: var(--text-white);
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--text-primary);
+    color: var(--accent);
     border: 1px solid var(--border-color);
 }
 
 .btn-outline:hover {
     background: var(--bg-muted);
+    color: var(--text-primary);
 }
 
 .btn-full {
@@ -203,7 +204,7 @@ body {
 .nav-brand a {
     font-size: var(--font-size-xl);
     font-weight: 700;
-    color: var(--primary);
+    color: var(--secondary);
     text-decoration: none;
 }
 
@@ -283,6 +284,7 @@ body {
     font-weight: 500;
     margin-bottom: var(--spacing-lg);
     animation: pulse 2s infinite;
+    margin-top: var(--spacing-3xl);
 }
 
 .hero-title {
